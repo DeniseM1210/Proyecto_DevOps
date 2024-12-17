@@ -44,6 +44,10 @@ app.post("/login", async(req, res)=>{
         res.send("Datos incorrectos");
     }
 
+    app.post('/github-webhook/', (req, res) => {
+        console.log('Payload recibido:', req.body);
+        res.status(200).send('OK');
+    });
     
 });
 
